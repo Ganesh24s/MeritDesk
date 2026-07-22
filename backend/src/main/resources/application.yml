@@ -1,0 +1,52 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: meritdesk
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/meritdesk
+    username: root
+    password: Ganesh_24s
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: meritdesk13@gmail.com
+    password: wiiylypeeckhmucs
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+  scheduling:
+    enabled: true
+
+app:
+  jwt:
+    secret: ${JWT_SECRET:MeritDeskSuperSecretKeyForJWTTokenGenerationThatIsAtLeast256BitsLong2024}
+    expiration-ms: 86400000  # 24 hours
+
+  frontend-url: ${FRONTEND_URL:http://localhost:5173}
+
+  super-admin:
+    email: admin@meritdesk.com
+    password: Admin@123
+    name: Platform Super Admin
+
+razorpay:
+  key-id: ${RAZORPAY_KEY_ID:rzp_test_TFjRYUVNwv8xOT}
+  key-secret: ${RAZORPAY_KEY_SECRET:LZeKle7DJvJKyWaVy6vtEOyQ}
