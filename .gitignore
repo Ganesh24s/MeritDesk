@@ -1,6 +1,20 @@
+# VS Code
 .vscode/
-node_modules/
-target/
-dist/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Backend
+backend/target/
+
+# Environment files
 .env
+.env.*
+
+# Logs
 *.log
+
+# OS files
+.DS_Store
+Thumbs.db
